@@ -1,4 +1,6 @@
-# Cosine Similarity - A Deep Dive
+# Brainstorm session for LLM model interaction with raw health data
+
+## Cosine Similarity - A Deep Dive
 
 Cosine similarity is a metric used to determine how similar the documents are irrespective of their size. The cosine of 0° is 1, and it is less than 1 for any angle in the interval (0,π] radians. It is thus a judgment of orientation and not magnitude: two vectors with the same orientation have a cosine similarity of 1, two vectors oriented at 90° relative to each other have a similarity of 0, and two vectors diametrically opposed have a similarity of -1, independent of their magnitude.
 
