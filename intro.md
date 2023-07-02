@@ -57,3 +57,8 @@ In this case, vecA and vecB could represent two different videos. A high cosine 
 
 ## Conclusion
 Cosine similarity is a powerful metric used in various fields, from data science to natural language processing, and it plays a crucial role in providing personalized experiences in modern-day applications. By understanding the algorithm and its practical applications, we can better leverage this tool to deliver more meaningful and tailored results.
+
+
+# ChatGPT Style custom data search architecture 
+![1_aP8m4U_BzAe-dYDyzjS7EQ](https://github.com/romanprotoliuk/cosine-similarity/assets/45060965/a12a5834-9df0-4655-ab34-6a1934169aa0)
+
