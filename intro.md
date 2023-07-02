@@ -62,7 +62,14 @@ Cosine similarity is a powerful metric used in various fields, from data science
 # ChatGPT Style custom data search architecture 
 ![1_aP8m4U_BzAe-dYDyzjS7EQ](https://github.com/romanprotoliuk/cosine-similarity/assets/45060965/a12a5834-9df0-4655-ab34-6a1934169aa0)
 
-## Usefull tools..
+## Useful Tools/Tech stack
+
+- [**pgvector**](https://github.com/romanprotoliuk/pgvector): A PostgreSQL extension for efficient vector computations.
+- [**langchain**](https://js.langchain.com/docs/): A powerful tool for natural language processing in JavaScript.
+- [**openai**](https://openai.com/)
+- [**NextJS**](https://nextjs.org/)
+- [**supabase**](https://supabase.com/)
+
 
 ## Product roadmap..
 
