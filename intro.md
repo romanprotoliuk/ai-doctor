@@ -71,5 +71,72 @@ Cosine similarity is a powerful metric used in various fields, from data science
 - [**supabase**](https://supabase.com/)
 
 
+## Caching for embedding 
+```
+class EmbeddingsCache {
+  constructor() {
+    this.cache = new Map();
+    this.pendingRequests = new Map();
+  }
+
+  async getEmbeddings(key, fetcher) {
+    if (this.cache.has(key)) {
+      return this.cache.get(key);
+    }
+
+    if (!this.pendingRequests.has(key)) {
+      this.pendingRequests.set(key, fetcher(key).then(data => {
+        this.pendingRequests.delete(key);
+        this.cache.set(key, data);
+        return data;
+      }));
+    }
+
+    return this.pendingRequests.get(key);
+  }
+}
+
+async function main() {
+  const cache = new EmbeddingsCache();
+  const apiKey = "YOUR_API_KEY";
+
+  try {
+    const key = "example_key";
+
+    const embeddings = await cache.getEmbeddings(key, (key) => fetchEmbeddingsFromAPI(key, apiKey));
+
+    processEmbeddings(embeddings);
+
+  } catch (e) {
+    console.log("An error occurred:", e.message);
+  }
+}
+
+async function fetchEmbeddingsFromAPI(key, apiKey) {
+  const url = "https://api.openai.com/v1/engines/text-davinci-003/completions";
+  const prompt = `Embed the text: "${key}"`;
+
+  const response = await makeAPIRequest(url, prompt, apiKey);
+
+  const embeddings = parseEmbeddings(response);
+
+  return embeddings;
+}
+
+async function makeAPIRequest(url, prompt, apiKey) {
+  throw new Error("makeAPIRequest is not implemented");
+}
+
+function parseEmbeddings(response) {
+  throw new Error("parseEmbeddings is not implemented");
+}
+
+function processEmbeddings(embeddings) {
+  console.log("Processing embeddings:", embeddings);
+}
+
+main();
+```
+
 ## Product roadmap..
 
