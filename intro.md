@@ -40,7 +40,7 @@ Cosine similarity has a great range of applications thanks to its focus on orien
 ## Practical Example
 For the vectors vecA = [1, 2, 3] and vecB = [4, 5, 6], their cosine similarity can be calculated as follows:
 
-```
+```javascript
 let vecA = [1, 2, 3];
 let vecB = [4, 5, 6];
 let similarity = cosineSimilarity(vecA, vecB);
@@ -74,7 +74,8 @@ Cosine similarity is a powerful metric used in various fields, from data science
 
 
 ## Caching for embedding 
-```
+
+```javascript
 class EmbeddingsCache {
   constructor() {
     this.cache = new Map();
